@@ -22,19 +22,19 @@ TC_01_005,01_Addition,Verify addition with zero,Calculator app is open and idle,
 TC_01_006,01_Addition,Verify addition fails with empty second operand,Calculator app is open and idle,"1. Enter 5
 2. Click '+'
 3. Leave second field empty
-4. Click '='","Error message displayed: ""Please enter a valid number"" OR '=' button remains disabled",High,Functional,Negative
+4. Click '='","Error message displayed: 'Please enter a valid number' OR '=' button remains disabled",High,Functional,Negative
 TC_01_007,01_Addition,Verify addition rejects alphabetic input,Calculator app is open and idle,"1. Enter 5
 2. Click '+'
-3. Enter ""abc""
-4. Click '='","Error message displayed: ""Invalid input"" in red text; calculation is not performed",High,Functional,Negative
+3. Enter 'abc'
+4. Click '='","Error message displayed: 'Invalid input' in red text; calculation is not performed",High,Functional,Negative
 TC_01_008,01_Addition,Verify addition rejects special characters,Calculator app is open and idle,"1. Enter 5
 2. Click '+'
-3. Enter ""@#$""
+3. Enter '@#$'
 4. Click '='",Error message displayed; input field highlighted; no crash,Medium,Functional,Negative
 TC_01_009,01_Addition,Verify addition handles maximum supported integer value,Calculator app is open and idle,"1. Enter 999999999999 (system max limit)
 2. Click '+'
 3. Enter 1
-4. Click '='","Result displayed correctly without truncation, overflow error, or crash; if limit exceeded, ""Number too large"" message shown",Medium,Functional,Edge
+4. Click '='","Result displayed correctly without truncation, overflow error, or crash; if limit exceeded, 'Number too large' message shown",Medium,Functional,Edge
 TC_01_010,01_Addition,Verify addition of extremely small decimal values,Calculator app is open and idle,"1. Enter 0.0000001
 2. Click '+'
 3. Enter 0.0000002
@@ -64,24 +64,24 @@ TC_02_004,02_Subtraction,Verify subtraction of a number from itself,Calculator a
 TC_02_005,02_Subtraction,Verify subtraction fails with missing first operand,Calculator app is open and idle,"1. Leave first field empty
 2. Click '-'
 3. Enter 4
-4. Click '='","Error message displayed: ""Please enter a valid number""; calculation blocked",High,Functional,Negative
-TC_02_006,02_Subtraction,Verify subtraction rejects non-numeric text input,Calculator app is open and idle,"1. Enter ""ten""
+4. Click '='","Error message displayed: 'Please enter a valid number'; calculation blocked",High,Functional,Negative
+TC_02_006,02_Subtraction,Verify subtraction rejects non-numeric text input,Calculator app is open and idle,"1. Enter 'ten'
 2. Click '-'
 3. Enter 4
 4. Click '='",Error message displayed in red text below input field; no crash,High,Functional,Negative
-TC_02_007,02_Subtraction,Verify subtraction with multiple decimal points in input,Calculator app is open and idle,"1. Enter ""5..5""
+TC_02_007,02_Subtraction,Verify subtraction with multiple decimal points in input,Calculator app is open and idle,"1. Enter '5..5'
 2. Click '-'
 3. Enter 2
 4. Click '='","Input rejected with validation error, OR only first decimal accepted per input masking rules; no crash",Medium,Functional,Negative
 TC_02_008,02_Subtraction,Verify subtraction at minimum supported negative boundary,Calculator app is open and idle,"1. Enter -999999999999 (system min limit)
 2. Click '-'
 3. Enter 1
-4. Click '='","Result displayed correctly or ""Number out of range"" error shown; no crash or silent overflow",Medium,Functional,Edge
-TC_02_009,02_Subtraction,Verify subtraction with leading zeros in input,Calculator app is open and idle,"1. Enter ""007""
+4. Click '='","Result displayed correctly or 'Number out of range' error shown; no crash or silent overflow",Medium,Functional,Edge
+TC_02_009,02_Subtraction,Verify subtraction with leading zeros in input,Calculator app is open and idle,"1. Enter '007'
 2. Click '-'
 3. Enter 2
 4. Click '='",Leading zeros handled correctly; result displayed: 5,Low,Functional,Edge
-TC_02_010,02_Subtraction,Verify subtraction using keyboard input instead of on-screen buttons,Calculator app is open and idle,"1. Use physical/keyboard keys to type ""20-8""
+TC_02_010,02_Subtraction,Verify subtraction using keyboard input instead of on-screen buttons,Calculator app is open and idle,"1. Use physical/keyboard keys to type '20-8'
 2. Press Enter key",Result displayed: 12; keyboard input behaves identically to button clicks,Medium,Usability,Real-World
 TC_03_001,03_Multiplication,Verify multiplication of two positive integers,Calculator app is open and idle,"1. Enter 6
 2. Click '×'
@@ -106,20 +106,20 @@ TC_03_005,03_Multiplication,Verify multiplication by 1 (identity check),Calculat
 TC_03_006,03_Multiplication,Verify multiplication rejects blank input field,Calculator app is open and idle,"1. Enter 6
 2. Click '×'
 3. Leave field blank
-4. Click '='","Error message displayed: ""Input required""; '=' does not compute",High,Functional,Negative
-TC_03_007,03_Multiplication,Verify multiplication rejects mixed alphanumeric input,Calculator app is open and idle,"1. Enter ""5a""
+4. Click '='","Error message displayed: 'Input required'; '=' does not compute",High,Functional,Negative
+TC_03_007,03_Multiplication,Verify multiplication rejects mixed alphanumeric input,Calculator app is open and idle,"1. Enter '5a'
 2. Click '×'
 3. Enter 3
 4. Click '='",Error message displayed clearly; calculation not performed; app does not crash,High,Functional,Negative
 TC_03_008,03_Multiplication,Verify multiplication result for very large numbers (overflow check),Calculator app is open and idle,"1. Enter 999999999
 2. Click '×'
 3. Enter 999999999
-4. Click '='","Result displayed correctly using scientific notation if needed, or ""Result too large"" message; no crash, no incorrect truncated value",Medium,Functional,Edge
+4. Click '='","Result displayed correctly using scientific notation if needed, or 'Result too large' message; no crash, no incorrect truncated value",Medium,Functional,Edge
 TC_03_009,03_Multiplication,Verify multiplication with extremely small decimal values,Calculator app is open and idle,"1. Enter 0.0001
 2. Click '×'
 3. Enter 0.0001
 4. Click '='",Result displayed accurately: 0.00000001 (or correctly rounded per app precision rules),Low,Functional,Edge
-TC_03_010,03_Multiplication,Verify multiplication using copy-pasted number values,Calculator app is open and idle,"1. Copy value ""45"" from another source
+TC_03_010,03_Multiplication,Verify multiplication using copy-pasted number values,Calculator app is open and idle,"1. Copy value '45' from another source
 2. Paste into first field
 3. Click '×'
 4. Enter 2
@@ -143,15 +143,15 @@ TC_04_004,04_Division,Verify division of zero by a non-zero number,Calculator ap
 TC_04_005,04_Division,Verify system handles division by zero (Critical Error Guessing case),Calculator app is open and idle,"1. Enter 10
 2. Click '÷'
 3. Enter 0
-4. Click '='","Error message displayed: ""Cannot divide by zero"" / ""Error""; application does NOT crash, freeze, or show ""Infinity""/""NaN"" without explanation",Critical,Functional,Negative
+4. Click '='","Error message displayed: 'Cannot divide by zero' / 'Error'; application does NOT crash, freeze, or show 'Infinity'/'NaN' without explanation",Critical,Functional,Negative
 TC_04_006,04_Division,Verify division rejects non-numeric divisor,Calculator app is open and idle,"1. Enter 10
 2. Click '÷'
-3. Enter ""xyz""
-4. Click '='","Error message displayed: ""Invalid input""; division not performed",High,Functional,Negative
+3. Enter 'xyz'
+4. Click '='","Error message displayed: 'Invalid input'; division not performed",High,Functional,Negative
 TC_04_007,04_Division,Verify division fails when dividend field is empty,Calculator app is open and idle,"1. Leave first field empty
 2. Click '÷'
 3. Enter 5
-4. Click '='","Error message displayed: ""Please enter a valid number""; '=' button disabled or shows validation error",High,Functional,Negative
+4. Click '='","Error message displayed: 'Please enter a valid number'; '=' button disabled or shows validation error",High,Functional,Negative
 TC_04_008,04_Division,Verify division of the smallest possible non-zero number by itself,Calculator app is open and idle,"1. Enter 0.0000001
 2. Click '÷'
 3. Enter 0.0000001
@@ -174,13 +174,13 @@ TC_05_001,05_ClearAndReset,Verify 'C'/'AC' button clears current input and resul
 TC_05_002,05_ClearAndReset,Verify 'Clear' does not affect calculation history (if history feature exists),A calculation has been performed and history panel is visible,"1. Perform a calculation
 2. Click 'C'
 3. Open history panel",Previous calculation remains listed in history; only current input is cleared,Low,Functional,Real-World
-TC_05_003,05_ClearAndReset,Verify backspace/delete removes only the last entered digit,Multi-digit number "12345" is entered in the input field,1. Click backspace/delete icon once,"Input field now displays ""1234"" (last digit removed only)",Medium,Functional,Positive
+TC_05_003,05_ClearAndReset,Verify backspace/delete removes only the last entered digit,Multi-digit number '12345' is entered in the input field,1. Click backspace/delete icon once,"Input field now displays '1234' (last digit removed only)",Medium,Functional,Positive
 TC_06_001,06_UI_Input_Validation,Verify calculator does not crash on consecutive operator clicks,Calculator app is open and idle,"1. Enter 5
 2. Click '+' then '-' then '×' consecutively without entering a number in between
 3. Enter 3
 4. Click '='",App handles gracefully — either uses the last selected operator or shows a validation message; no crash,Medium,Functional,Edge
-TC_06_002,06_UI_Input_Validation,Verify input field enforces a reasonable maximum digit length,Calculator app is open and idle,1. Attempt to enter a 20-digit number into the input field,"Input is either truncated at defined max length or an ""Input limit exceeded"" message is shown; no UI overflow/crash",Medium,Functional,Edge
-TC_06_003,06_UI_Input_Validation,Verify calculator supports both mouse-click and keyboard operations equally,Calculator app is open and idle,"1. Perform ""8 + 2 ="" using only on-screen buttons
+TC_06_002,06_UI_Input_Validation,Verify input field enforces a reasonable maximum digit length,Calculator app is open and idle,1. Attempt to enter a 20-digit number into the input field,"Input is either truncated at defined max length or an 'Input limit exceeded' message is shown; no UI overflow/crash",Medium,Functional,Edge
+TC_06_003,06_UI_Input_Validation,Verify calculator supports both mouse-click and keyboard operations equally,Calculator app is open and idle,"1. Perform '8 + 2 =' using only on-screen buttons
 2. Refresh and repeat using only keyboard",Both methods return identical result (10) with the same UI behavior,Medium,Usability,Real-World
 TC_06_004,06_UI_Input_Validation,Verify calculator retains correct state after network interruption (web-based demo site),Calculator web app is open with an active internet connection,"1. Enter 15
 2. Click '+'
