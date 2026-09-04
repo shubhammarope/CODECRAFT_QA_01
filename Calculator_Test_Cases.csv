@@ -44,7 +44,7 @@ TC_01_011,01_Addition,Verify rapid repeated addition (chained operations),Calcul
 3. Enter 3
 4. Click '='",Calculator handles rapid clicks gracefully; no duplicate operators applied; correct or clearly defined result shown,Medium,Functional,Real-World
 TC_01_012,01_Addition,Verify addition result persists after screen rotation / window resize,Result of 5+3=8 is displayed on screen,"1. Rotate device / resize browser window
-2. Observe displayed result","Result ""8"" remains visible and correctly formatted after UI resize",Low,Usability,Real-World
+2. Observe displayed result","Result '8' remains visible and correctly formatted after UI resize",Low,Usability,Real-World
 TC_02_001,02_Subtraction,Verify subtraction of two positive integers,Calculator app is open and idle,"1. Enter 10
 2. Click '-'
 3. Enter 4
